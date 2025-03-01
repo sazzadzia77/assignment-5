@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>DevBoard</title>
+    <style type="text/tailwindcss">
+        .poppins-regular{
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="poppins-regular bg-gray-100 pb-10">
+    <!-- Header section -->
+    <header class="max-w-[1170px] bg-white mx-auto px-3 py-4 rounded-2xl">
+        <nav class="flex justify-between items-center">
+            <!-- left container-->
+            <div class="flex items-center">
+                <div class="w-8">
+                    <img src="./assets/logo.png" alt="">
+                </div>
+                <p class="text-2xl">Dev<span class="font-bold">Board</span></p>
+            </div>
+            <!-- Right container -->
+            <div class="flex items-center gap-5">
+                <div class="bg-gray-100 flex items-center gap-1 rounded-2xl px-2">
+                    <input class="w-4 h-4" type="checkbox" id="" checked>
+                    <label id="increment" for="" class="text-md font-semibold">23</label>
+                </div>
+                <div class="w-6">
+                    <img id="btn-theme" class="w-full cursor-pointer" src="./assets/theme-btn.png" alt="">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="max-w-[1170px] mx-auto mt-3 ">
+            <!-- main container -->
+            <div class="flex flex-col sm:flex-row gap-3">
+                <!-- Left container -->
+                <div class="bg-white sm:w-3/4  rounded-2xl">
+                    <!-- Left top container-->
+                    <div class="flex flex-col sm:flex-row px-3 pt-3 pb-4 gap-3">
+                        <!-- First container -->
+                        <div class="sm:w-1/4 flex justify-center items-center gap-3 bg-gray-100 p-3 rounded-md pl-8">
+                            <input class="w-4 h-4" type="checkbox" id="" checked>
+                            <div>
+                                <p class="text-sm font-light">Task Assigned </p>
+                                <p id="decrement" class="font-semibold">06</p>
+                            </div>
+                        </div>
+                        <!-- second container -->
+                        <div id="btn-blog" class="sm:w-2/4 bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] flex items-center p-3 pl-6 gap-4 rounded-md cursor-pointer">
+                            <div class="w-16">
+                                <img src="./assets/board.png" alt="">
+                            </div>
+                            <div class="text-white">
+                                <p class="text-base">Discover Something </p>
+                                <p class=''>New Today!</p>
+                            </div>
+                        </div>
+                        <!-- Third container -->
+                        <div class="sm:w-1/4 flex justify-center items-center gap-3 bg-gray-100 p-3 rounded-md pl-8">
+                            <div class="w-6">
+                                <img src="./assets/calender.png" alt="">
+                            </div>
+                            <div>
+                                <p id="week" class="text-sm font-light"></p>
+                                <p class="font-semibold"><span id="month"></span> <span id="date"></span> <span id="year"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="border-dashed border-gray-300">
+                    <!-- Left bottom container -->
+                     <div class="grid sm:grid-cols-3 gap-3 px-3 py-4 ">
+                        <!-- Fix Mobile Button Issue 1-->
+                         <div class="bg-gray-100 p-3 rounded-md">
+                            <span class="bg-white px-3 py-1 inline-block rounded-md">ShopEase</span>
+                            <h2 id="task-one" class="my-3 font-medium text-xl">Fix Mobile Button Issue </h2>
+                            <div class="bg-white text-sm text-gray-500 p-3">
+                                <P>Debug using Chrome </P>
+                                <P>DevTools, check for overlappin</P>
+                            </div>
+                            <hr class="border-dashed border-gray-300 mt-3 mb-4">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="text-gray-500">Deadline</p>
+                                    <p class="font-medium">21 March 2025</p>
+                                </div>
+                                <button class="btn bg-[#3752FD] font-medium text-sm text-white px-3 py-2 rounded-md cursor-pointer" id="btn-task-one" >Completed</button>
+                            </div>
+                         </div>
+                        <!-- Add Dark Mode 2-->
+                         <div class="bg-gray-100 p-3 rounded-md">
+                            <span class="bg-white px-3 py-1 inline-block rounded-md">CloudSync</span>
+                            <h2 id="task-two" class="my-3 font-medium text-xl">Add Dark Mode</h2>
+                            <div class="bg-white text-sm text-gray-500 p-3">
+                                <P>Store the user's preference in</P>
+                                <P>localStorage, update CSS varia</P>
+                            </div>
+                            <hr class="border-dashed border-gray-300 mt-3 mb-4">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="text-gray-500">Deadline</p>
+                                    <p class="font-medium">21 March 2025</p>
+                                </div>
+                                <button id="btn-task-two" class="btn bg-[#3752FD] font-medium text-sm text-white px-3 py-2 rounded-md">Completed</button>
+                            </div>
+                         </div>
+                        <!-- Optimize  Home page  3-->
+                         <div class="bg-gray-100 p-3 rounded-md">
+                            <span class="bg-white px-3 py-1 inline-block rounded-md">SwiftPay</span>
+                            <h2 id="task-three" class="my-3 font-medium text-xl">Optimize  Home page </h2>
+                            <div class="bg-white text-sm text-gray-500 p-3">
+                                <P>Debug using Chrome </P>
+                                <P>DevTools, check for overlappin</P>
+                            </div>
+                            <hr class="border-dashed border-gray-300 mt-3 mb-4">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="text-gray-500">Deadline</p>
+                                    <p class="font-medium">21 March 2025</p>
+                                </div>
+                                <button id="btn-task-three" class="btn bg-[#3752FD] font-medium text-sm text-white px-3 py-2 rounded-md">Completed</button>
+                            </div>
+                         </div>
+                        <!-- Add new emoji 🤲 4-->
+                         <div class="bg-gray-100 p-3 rounded-md">
+                            <span class="bg-white px-3 py-1 inline-block rounded-md">Meta</span>
+                            <h2 id="task-four" class="my-3 font-medium text-xl">Add new emoji 🤲</h2>
+                            <div class="bg-white text-sm text-gray-500 p-3">
+                                <P>Debug using Chrome </P>
+                                <P>DevTools, check for overlappin</P>
+                            </div>
+                            <hr class="border-dashed border-gray-300 mt-3 mb-4">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="text-gray-500">Deadline</p>
+                                    <p class="font-medium">21 March 2025</p>
+                                </div>
+                                <button id="btn-task-four" class="btn bg-[#3752FD] font-medium text-sm text-white px-3 py-2 rounded-md">Completed</button>
+                            </div>
+                         </div>
+                        <!-- Integrate OpenAI API  5-->
+                         <div class="bg-gray-100 p-3 rounded-md">
+                            <span class="bg-white px-3 py-1 inline-block rounded-md">Google LLC</span>
+                            <h2 id="task-five" class="my-3 font-medium text-xl">Integrate OpenAI API </h2>
+                            <div class="bg-white text-sm text-gray-500 p-3">
+                                <P>Debug using Chrome </P>
+                                <P>DevTools, check for overlappin</P>
+                            </div>
+                            <hr class="border-dashed border-gray-300 mt-3 mb-4">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="text-gray-500">Deadline</p>
+                                    <p class="font-medium">21 March 2025</p>
+                                </div>
+                                <button id="btn-task-five" class="btn bg-[#3752FD] font-medium text-sm text-white px-3 py-2 rounded-md">Completed</button>
+                            </div>
+                         </div>
+                        <!-- Improve Job searching  6-->
+                         <div class="bg-gray-100 p-3 rounded-md">
+                            <span class="bg-white px-3 py-1 inline-block rounded-md">Glassdoar</span>
+                            <h2 id="task-six" class="my-3 font-medium text-xl">Improve Job searching </h2>
+                            <div class="bg-white text-sm text-gray-500 p-3">
+                                <P>Debug using Chrome </P>
+                                <P>DevTools, check for overlappin</P>
+                            </div>
+                            <hr class="border-dashed border-gray-300 mt-3 mb-4">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="text-gray-500">Deadline</p>
+                                    <p class="font-medium">21 March 2025</p>
+                                </div>
+                                <button id="btn-task-six" class="btn bg-[#3752FD] font-medium text-sm text-white px-3 py-2 rounded-md">Completed</button>
+                            </div>
+                         </div>
+                     </div>
+                </div>
+                <!-- Right container -->
+                <div class="bg-white sm:w-1/4 rounded-2xl">
+                    <!-- fixed section -->
+                     <div class="flex flex-col justify-center gap-2 items-center">
+                        <div class="flex gap-2 mt-5">
+                            <div><img src="./assets/activity.png" alt=""></div>
+                            <p class="font-medium">Activity log</p>
+                        </div>
+                        <button id="btn-history" class="btn bg-[#3752FD] font-medium text-sm text-white px-3 py-2 rounded-md cursor-pointer">Clear History</button>
+                     </div>
+                     <hr class="border-dashed border-gray-300 mt-3 mb-4">
+                     <!-- dynamic section -->
+                      <div id="add-activity" class="p-2">
+
+                      </div>
+                </div>
+            </div>
+        </section>
+        <!-- <h2 class="h-10"></h2> -->
+    </main>
+
+    <script>
+        document.getElementById('btn-blog')
+    .addEventListener('click', function () {
+        window.location.href = 'blog.html';
+    })
+    </script>
+    <script src="./utilities/utilities.js"></script>
+    <script src="./scripts/redirect.js"></script>
+    <script src="./scripts/compleated.js"></script>
+    <script src="./scripts/clear.js"></script>
+    <script src="./scripts/theme.js"></script>
+    <script src="./scripts/date.js"></script>
+</body>
+
+</html>
